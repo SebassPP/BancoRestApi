@@ -8,12 +8,12 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cuenta {
-    @Id // Asigno numero de cuenta como clave primaria
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Autoincremental si se requiere
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long numeroCuenta;
-    @Column(nullable = false) // No puede ser nulo
+    @Column(nullable = false)
     private String nombreTitular;
-    @Column(nullable = false, length = 10) // Maximo de tamaño =10
+    @Column(nullable = false, length = 10)
     private int documentoTitular;
     @Column(nullable = false)
     private String fechaCreacion;
