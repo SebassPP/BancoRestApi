@@ -1,7 +1,7 @@
-package com.brokis.banco.servicios;
+package com.brokis.banco.servicio;
 
 import com.brokis.banco.modelo.Cuenta;
-import com.brokis.banco.repocitorios.RepCuenta;
+import com.brokis.banco.repositorio.RepCuenta;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,12 +12,6 @@ import java.util.Optional;
 public class ServicioCuentaImp implements ServicioCuenta {
 
     private final RepCuenta repCuenta;
-
-    @Override
-    public Cuenta crearCuenta(Cuenta cuenta) {
-
-        return repCuenta.save(cuenta);
-    }
 
     @Override
     public Optional<Cuenta> consultarSaldo(Long numeroCuenta) {
